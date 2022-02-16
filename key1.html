@@ -1,0 +1,18 @@
+<html>
+<script>
+	let size=10
+	function dosomething(){
+		if(event.ctrlKey){
+			size++
+		}
+		if(event.altKey){
+			size--
+		}
+
+		s.style.fontSize=size
+	}
+</script>
+<body onkeydown="dosomething()">
+<span id="s" style="position:absolute;top:100;left:300"> Mimi</span>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<script>
+	let size=10
+	function dosomething(){
+		if(event.ctrlKey){
+			size+=1
+		}
+		if(event.altKey){
+			size-=1
+		}
+		console.log(event.ctrlKey+"..."+event.altKey)
+		s.style.top=event.clientY
+		s.style.top=event.clientX
+		s.style.fontSize=size
+	}
+</script>
+<body onmousemove="dosomething()">
+<span id="s" style="position:absolute;top:100;left:300"> Mimi</span>
+</body>
+</html>

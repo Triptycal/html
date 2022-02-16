@@ -1,0 +1,50 @@
+<html>
+<script>
+	let buttonType=""
+	
+	function theButton(val){
+		let message=msg.value
+		let i=0
+		buttonType=val
+		if(buttonType=="upper"){
+			copyUpper();
+		}
+		if(buttonType=="lower"){
+			copyLower();
+		}
+		if(buttonType=="digits"){
+			copyDigits();
+		}
+	}
+	function copyUpper(){
+		while (i<message.length){
+			if(message.charCodeAt(i)>=65 && message.charCodeAt(i)<=90){
+				newmsg.value+=message.substring(i,i+1)
+			}
+			i++
+		}
+	}
+	function copyLower(){
+		while (i<message.length){
+			if(message.charCodeAt(i)>=97 && message.charCodeAt(i)<=122){
+				newmsg.value+=message.substring(i,i+1)
+			}
+			i++
+		}
+	}
+	function copyDigits(){
+		while (i<message.length){
+			if(message.charCodeAt(i)>=48 && message.charCodeAt(i)<=57){
+				newmsg.value+=message.substring(i,i+1)
+			}
+			i++
+		}
+	}
+</script>
+Enter Message:<input type="text" id="msg"> <br>
+<input type="Button" value="Copy UpperCase Letters" onClick="theButton('upper')">
+<input type="Button" value="Copy LowerCase Letters" onClick="theButton('lower')">
+<input type="Button" value="Copy Digits" onClick="theButton('digits')">
+<br>
+New Message:<input type="text" id="newmsg"><br?
+</html>

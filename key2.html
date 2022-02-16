@@ -1,0 +1,26 @@
+<html>
+<script>
+// moves text around the screen based on which arrow key is selected
+	let T=0
+	let L=0
+	function dosomething(){
+		if(event.keyCode==39){ //right
+			L+=5
+		}
+		if(event.keyCode==37){ //left
+			L-=5
+		}
+		if(event.keyCode==40){ //down
+			T+=5
+		}
+		if(event.keyCode==38){ //up
+			T-=5
+		}
+		s.style.left=L
+		s.style.top=T
+	}
+</script>
+<body onkeydown="dosomething()">
+<span id="s" style="position:absolute;top:100;left:300"> Mimi</span>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<script> //function based on button clicked
+
+	let first=0;
+	let second=0;
+	let operator="";
+	
+	function digits(digit){
+			output.value+=digit;
+	}	
+	function operation(option){
+			first=parseInt(output.value);
+			operator=option;
+			screenClear();
+			
+	}
+	function screenClear(){
+		output.value="";
+	}
+	function result(){
+		if(operator=="+"){
+			output.value=first+parseInt(output.value);
+		}
+		if(operator=="-"){
+			output.value=first-parseInt(output.value);
+		}
+		if(operator=="x"){
+			output.value=first*parseInt(output.value);
+		}
+		if(operator=="/"){
+			output.value=first/parseInt(output.value);
+		}
+	}
+	
+</script>
+
+
+
+<table border='1'>
+	<tr>
+		<td colspan='4'><input id="output" type="text"></td>
+	</tr>
+	<tr>
+		<td colspan='3'>
+			<input id="clear" type="Button" value="Clear" onClick="screenClear()">
+			<input id="back" type="Button" value="Back" onClick="">
+		</td>
+		<td><input id="/" type="Button" value="/" onClick="operation('/')"></td>
+	</tr>
+	<tr>
+		<td><input id="7" type="Button" value="7" onClick="digits('7')"></td>
+		<td><input id="8" type="Button" value="8" onClick="digits('8')"></td>
+		<td><input id="9" type="Button" value="9" onClick="digits('9')"></td>
+		<td><input id="x" type="Button" value="x" onClick="operation('x')"></td>
+	</tr>
+	<tr>
+		<td><input id="4" type="Button" value="4" onClick="digits('4')"></td>
+		<td><input id="5" type="Button" value="5" onClick="digits('5')"></td>
+		<td><input id="6" type="Button" value="6" onClick="digits('6')"></td>
+		<td><input id="-" type="Button" value="-" onClick="operation('-')"></td>
+	</tr>
+	<tr>
+		<td><input id="1" type="Button" value="1" onClick="digits('1')"></td>
+		<td><input id="2" type="Button" value="2" onClick="digits('2')"></td>
+		<td><input id="3" type="Button" value="3" onClick="digits('3')"></td>
+		<td><input id="+" type="Button" value="+" onClick="operation('+')"></td>
+	</tr>
+		<tr>
+		<td></td>
+		<td><input id="0" type="Button" value="0" onClick="digits('0')"></td>
+		<td><input id="." type="Button" value="." onClick=""></td>
+		<td><input id="=" type="Button" value="=" onClick="result()"></td>
+	</tr>
+	
+</table>
+</html>
+
+
+</html>

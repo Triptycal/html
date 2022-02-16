@@ -1,0 +1,38 @@
+<html>
+<script>
+let records=
+	[
+		{
+			"name":"Mimi",
+			"marks":123,
+		},
+		{
+			"name":"Ben",
+			"marks":321,
+		},
+	];
+function show(){
+	let table1=document.createElement("table")
+	table1.border="1"
+	for (let i=0;i<records.length;i++){
+		let tr1=document.createElement("tr")
+		let td1=document.createElement("td")
+		let td2=document.createElement("td")
+		
+		td1.innerHTML=records[i].name
+		td2.innerHTML=records[i].marks
+		
+		tr1.appendChild(td1)
+		tr1.appendChild(td2)
+		
+	table1.appendChild(tr1)
+	}
+	document.body.appendChild(table1)
+
+}
+</script>
+<body onload="show()">
+</body>
+
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+<script> //function based on button clicked
+	function operation(option){
+	// If any text box values are missing then it won't do the calculation. It will catch the things that would produce errors before getting to the event and only carry out the event if no errors have been caught.
+		if(txt1.value==""){
+			alert("First Number is Missing!")
+			txt1.focus() //moves the cursor to text box 1, so the user can input the missing value
+		}
+		else{
+			if(txt2.value==""){
+				alert("Second Number is Missing!")
+				txt2.focus() //moves the cursor to text box 1, so the user can input the missing value
+			}
+			else{
+				let result=0;
+				let no1=txt1.value;
+				let no2=txt2.value;
+				if (option=="+"){
+					result=parseInt(no1)+parseInt(no2);
+				}
+				if (option=="-"){
+					result=parseInt(no1)-parseInt(no2);
+				}
+				if (option=="x"){
+					result=parseInt(no1)*parseInt(no2);
+				}
+				if (option=="/"){
+					result=parseInt(no1)/parseInt(no2);
+				}
+				txt3.value=result;
+				
+			}
+		
+		}
+	}
+</script>
+
+
+First Number:<input id="txt1" type="text">
+<br>
+Second Number:<input id="txt2" type="text">
+<br>
+<input
+	id="btn"
+	type="Button"
+	value="+"
+	onClick="operation('+')">
+<input
+	id="btn"
+	type="Button"
+	value="-"
+	onClick="operation('-')">
+<input
+	id="btn"
+	type="Button"
+	value="x"
+	onClick="operation('x')">
+<input
+	id="btn"
+	type="Button"
+	value="/"
+	onClick="operation('/')">
+<br>
+Result:<input id="txt3" type="text">
+<br>
+</html>
+
+
+</html>

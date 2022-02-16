@@ -1,0 +1,55 @@
+<html>
+<script>
+let table1=""
+let records=
+	[
+		{
+			"name":"Name",
+			"marks":"Marks",
+		},
+	];
+function show(){
+	table1=document.createElement("table")
+	table1.border="1"
+	for (let i=0;i<records.length;i++){
+		addTable(records[i].name,records[i].marks);
+	}
+	document.body.appendChild(table1)
+
+}
+function addrecord(){
+	records.push(
+		{
+			"name":na.value,
+			"marks":marks.value
+		}
+		)
+		addTable(na.value,marks.value);
+}
+function addTable(rName,rMarks){
+	let recordName =rName
+	let recordMarks =rMarks
+	let tr1=document.createElement("tr")
+	let td1=document.createElement("td")
+	let td2=document.createElement("td")
+		
+	td1.innerHTML=recordName
+	td2.innerHTML=recordMarks
+		
+	tr1.appendChild(td1)
+	tr1.appendChild(td2)
+		
+	table1.appendChild(tr1)
+	
+}
+</script>
+<body onload="show()">
+	Name:<input type="text" id="na"><br>
+	Marks:<input type="text" id="marks"><br>
+	<input type="button" value="add" onclick="addrecord()"><br>
+	<br>
+	<br>
+</body>
+
+
+</html>

@@ -1,0 +1,122 @@
+<html>
+<script> //adds 2 lines of code together
+	function addition(){
+	// If any text box values are missing then it won't do the calculation. It will catch the things that would produce errors before getting to the event and only carry out the event if no errors have been caught.
+		if(txt1.value==""){
+			alert("First Number is Missing!")
+			txt1.focus() //moves the cursor to text box 1, so the user can input the missing value
+		}
+		else{
+			if(txt2.value==""){
+				alert("Second Number is Missing!")
+				txt2.focus() //moves the cursor to text box 1, so the user can input the missing value
+			}
+			else{
+				let no1=txt1.value;
+				let no2=txt2.value;
+				let result=parseInt(no1)+parseInt(no2);
+				txt3.value=result;
+			}
+		
+		}
+	}
+
+	function subtraction(){
+	// If any text box values are missing then it won't do the calculation. It will catch the things that would produce errors before getting to the event and only carry out the event if no errors have been caught.
+		if(txt1.value==""){
+			alert("First Number is Missing!")
+			txt1.focus() //moves the cursor to text box 1, so the user can input the missing value
+		}
+		else{
+			if(txt2.value==""){
+				alert("Second Number is Missing!")
+				txt2.focus() //moves the cursor to text box 1, so the user can input the missing value
+			}
+			else{
+				let no1=txt1.value;
+				let no2=txt2.value;
+				let result=parseInt(no1)+parseInt(no2);
+				txt3.value=result;
+			}
+		
+		}
+	}
+
+	function multiplication(){
+	// If any text box values are missing then it won't do the calculation. It will catch the things that would produce errors before getting to the event and only carry out the event if no errors have been caught.
+		if(txt1.value==""){
+			alert("First Number is Missing!")
+			txt1.focus() //moves the cursor to text box 1, so the user can input the missing value
+		}
+		else{
+			if(txt2.value==""){
+				alert("Second Number is Missing!")
+				txt2.focus() //moves the cursor to text box 1, so the user can input the missing value
+			}
+			else{
+				let no1=txt1.value;
+				let no2=txt2.value;
+				let result=parseInt(no1)+parseInt(no2);
+				txt3.value=result;
+			}
+		
+		}
+	}
+
+	function division(){
+	// If any text box values are missing then it won't do the calculation. It will catch the things that would produce errors before getting to the event and only carry out the event if no errors have been caught.
+		if(txt1.value==""){
+			alert("First Number is Missing!")
+			txt1.focus() //moves the cursor to text box 1, so the user can input the missing value
+		}
+		else{
+			if(txt2.value==""){
+				alert("Second Number is Missing!")
+				txt2.focus() //moves the cursor to text box 1, so the user can input the missing value
+			}
+			else{
+				let no1=txt1.value;
+				let no2=txt2.value;
+				let result=parseInt(no1)+parseInt(no2);
+				txt3.value=result;
+			}
+		
+		}
+	}
+</script>
+
+
+First Number:<input id="txt1" type="text">
+<br>
+Second Number:<input id="txt2" type="text">
+<br>
+<input
+	id="btn"
+	type=Button"
+	value="+"
+	onClick="addition()">
+<br>
+<input
+	id="btn"
+	type=Button"
+	value="-"
+	onClick="subtraction()">
+<br>
+<input
+	id="btn"
+	type=Button"
+	value="x"
+	onClick="multiplication()">
+<br>
+<input
+	id="btn"
+	type=Button"
+	value="/"
+	onClick="division()">
+<br>
+Result:<input id="txt3" type="text">
+<br>
+</html>
+
+
+</html>
